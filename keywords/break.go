@@ -20,7 +20,7 @@ OutterLoop:
 	for _, i := range "♥♠♣♦" {
 		for cnt, j := range "AKQJ098765432" {
 			gotcards = append(gotcards, string(i)+string(j))
-			if cnt == n-1 { // I wanna play show-hand
+			if cnt == n-1 { // I wanna get n cards
 				break OutterLoop // break the Outter loop using lable
 			}
 		}
