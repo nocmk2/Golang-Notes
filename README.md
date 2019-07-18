@@ -52,6 +52,26 @@ func playPoker(t string, n int) []string {
 }
 ```
 
+``` golang
+func gBoom(s rune) []string {
+	boom := make([]string, 0)
+	for _, i := range "♥♠♣♦" {
+	second:
+		for _, j := range "AKQJ098765432" {
+			fmt.Println(string(i) + string(j))
+			switch j {
+			case s:
+				boom = append(boom, string(i)+string(j))
+				// single break without label only break the switch  not the second for loop
+				// break only break out to the innermost "for" "switch" "select"
+				break second
+			}
+		}
+	}
+	return boom
+}
+```
+
 ### case
 ```
 ```

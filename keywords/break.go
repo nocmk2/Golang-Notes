@@ -1,5 +1,7 @@
 package keywords
 
+import "fmt"
+
 func showHand() []string {
 	gotcards := make([]string, 0)
 	for _, i := range "♥♠♣♦" {
@@ -18,9 +20,9 @@ func topCards(n int) []string {
 	gotcards := make([]string, 0)
 OutterLoop:
 	for _, i := range "♥♠♣♦" {
-		for cnt, j := range "AKQJ098765432" {
+		for _, j := range "AKQJ098765432" {
 			gotcards = append(gotcards, string(i)+string(j))
-			if cnt == n-1 { // I wanna get n cards
+			if len(gotcards) == n { // I wanna get n cards
 				break OutterLoop // break the Outter loop using lable
 			}
 		}
@@ -29,12 +31,20 @@ OutterLoop:
 	return gotcards // finaly i got 28 show-hand cards
 }
 
-func playPoker(t string, n int) []string {
-	if t == "showHand" {
-		return showHand()
-	} else if t == "topCards" {
-		return topCards(n)
-	} else {
-		panic("wrong poker game type:  showHand or topCards")
+func gBoom(s rune) []string {
+	boom := make([]string, 0)
+	for _, i := range "♥♠♣♦" {
+	second:
+		for _, j := range "AKQJ098765432" {
+			fmt.Println(string(i) + string(j))
+			switch j {
+			case s:
+				boom = append(boom, string(i)+string(j))
+				// single break without label only break the switch  not the second for loop
+				// break only break out to the innermost "for" "switch" "select"
+				break second
+			}
+		}
 	}
+	return boom
 }
