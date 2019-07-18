@@ -73,7 +73,21 @@ func gBoom(s rune) []string {
 ```
 
 ### case
+``` golang
+case 1, 3, 7, 7:  // compile error
 ```
+
+``` golang
+case 1, 3, seven(), 7: f1()
+
+
+func seven() int {
+	return 7
+}
+```
+
+``` golang
+case 1>2: f1()
 ```
 
 ### chan
