@@ -74,7 +74,7 @@ func gBoom(s rune) []string {
 
 ### case
 ``` golang
-case 1, 3, 7, 7:  // compile error
+case 1, 3, 7, 7:  // compile error  two 7 here
 ```
 
 ``` golang
@@ -88,6 +88,13 @@ func seven() int {
 
 ``` golang
 case 1>2: f1()
+```
+
+- case constant string  compare to if
+- https://github.com/golang/go/issues/10000
+
+``` golang
+
 ```
 
 ### chan
@@ -231,7 +238,7 @@ Types
 
 
 Functions
------
+---------
 
 ### make
 ```
@@ -282,6 +289,13 @@ Functions
 ```
 
 ### recover
+```
+```
+
+Others
+------
+
+### ... (ellipsis)
 ```
 ```
 
