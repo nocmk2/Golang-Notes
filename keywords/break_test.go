@@ -14,7 +14,6 @@ func Test_gBoom(t *testing.T) {
 		args args
 		want []string
 	}{
-		// TODO: Add test cases.
 		{"case1", args{'0'}, []string{"♥K", "♠K", "♣K", "♦K"}},
 		// {"case2", args{'Q'}, []string{"♥Q", "♠Q", "♣Q", "♦Q"}},
 		// {"case3", args{'9'}, []string{"♥9", "♠9", "♣9", "♦9"}},
@@ -40,7 +39,6 @@ func Test_topCards(t *testing.T) {
 		args args
 		want int
 	}{
-		// TODO: Add test cases.
 		{"case1", args{2}, 2},
 		{"case1", args{20}, 20},
 		{"case1", args{100}, 52},
@@ -59,7 +57,6 @@ func Test_showHand(t *testing.T) {
 		name string
 		want []string
 	}{
-		// TODO: Add test cases.
 		{"case1", []string{"♥A", "♥K", "♥Q", "♥J", "♥0", "♥9", "♥8", "♠A", "♠K", "♠Q", "♠J", "♠0", "♠9", "♠8", "♣A", "♣K", "♣Q", "♣J", "♣0", "♣9", "♣8", "♦A", "♦K", "♦Q", "♦J", "♦0", "♦9", "♦8"}},
 	}
 	for _, tt := range tests {

@@ -7,7 +7,6 @@ func Test_expressionSwitches(t *testing.T) {
 		name string
 		want int
 	}{
-		// TODO: Add test cases.
 		{"case1", 2},
 	}
 	for _, tt := range tests {
